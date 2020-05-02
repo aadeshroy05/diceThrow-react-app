@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.Container {
+  height: 390px;
+  width: 350px;
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 #bbb;
+}
+.DiceContainer {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.Dice {
+  max-width: 100%;
+  max-width: 100%;
+}
+.diceBtnContainer {
+  width: 280px;
+  margin: 0 auto;
+}
+.diceBtn {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  outline: none;
+  background-color: #ff734b;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #780000;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.diceBtn:hover {
+  background-color: #780000;
 }

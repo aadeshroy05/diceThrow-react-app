@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    dice: 6,
+  };
+  changeDice = () => {
+    const diceValue = Math.floor(Math.random() * 6 + 1);
+    this.setState({
+      dice: diceValue,
+    });
+  };
+  render() {
+    return (
+      <div className="App">
+        <div className="Container">
+          <div className="DiceContainer">
+            <img
+              className="Dice"
+              src={require(`./DiceImages/dice${this.state.dice}.png`)}
+              alt="dice"
+            />
+          </div>
+          <div className="diceBtnContainer">
+            <button onClick={this.changeDice} className="diceBtn">
+              Let's Play
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
-
-export default App;
